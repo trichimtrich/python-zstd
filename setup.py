@@ -160,7 +160,7 @@ setup(
     name='python_zstd',
     version=PKG_VERSION_STR,
     description="ZSTD Bindings for Python",
-    long_description=open('README.rst', 'r').read(),
+    long_description=open('README.rst.old', 'r').read(),
     author='Sergey Dryabzhinsky, Anton Stuk',
     author_email='sergey.dryabzhinsky@gmail.com',
     maintainer='Sergey Dryabzhinsky',
