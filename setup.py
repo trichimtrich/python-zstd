@@ -157,7 +157,7 @@ def my_test_suite():
     return test_suite
 
 setup(
-    name='zstd',
+    name='python_zstd',
     version=PKG_VERSION_STR,
     description="ZSTD Bindings for Python",
     long_description=open('README.rst', 'r').read(),
@@ -171,7 +171,7 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     ext_modules=[
-        Extension('zstd', zstdFiles, libraries=ext_libraries)
+        Extension('python_zstd', zstdFiles, libraries=ext_libraries)
     ],
     cmdclass = {'build_ext': ZstdBuildExt },
     test_suite='setup.my_test_suite',

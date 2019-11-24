@@ -358,7 +358,7 @@ static int myextension_clear(PyObject *m) {
 
 static struct PyModuleDef moduledef = {
         PyModuleDef_HEAD_INIT,
-        "zstd",
+        "python_zstd",
         NULL,
         sizeof(struct module_state),
         ZstdMethods,
@@ -369,7 +369,7 @@ static struct PyModuleDef moduledef = {
 };
 
 #define INITERROR return NULL
-PyObject *PyInit_zstd(void)
+PyObject *PyInit_python_zstd(void)
 
 #else
 #define INITERROR return
@@ -380,7 +380,7 @@ void initzstd(void)
 #if PY_MAJOR_VERSION >= 3
     PyObject *module = PyModule_Create(&moduledef);
 #else
-    PyObject *module = Py_InitModule("zstd", ZstdMethods);
+    PyObject *module = Py_InitModule("python_zstd", ZstdMethods);
 #endif
     if (module == NULL) {
         INITERROR;
